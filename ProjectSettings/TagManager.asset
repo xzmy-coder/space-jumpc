@@ -13,6 +13,7 @@ TagManager:
   - Save3
   - Save4
   - DotsLoad
+  - BounceWall
   layers:
   - Default
   - TransparentFX
