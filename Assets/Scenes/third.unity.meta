@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/first.unity.meta
+guid: 2d24b23595af1b2479301d1df8e3d9c7
+========
+guid: 20091f6d4a288db40a09f5c49c7885a9
+>>>>>>>> slx:Assets/Scenes/second.unity.meta
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

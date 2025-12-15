@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scenes/first.unity.meta
-guid: a7ac4838558a71847b5b68d11db07b44
-========
-guid: 20091f6d4a288db40a09f5c49c7885a9
->>>>>>>> slx:Assets/Scenes/second.unity.meta
+guid: 40ef6e60490d68541971945758777f58
+timeCreated: 1567596439
+licenseType: Store
 DefaultImporter:
-  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155369
+  packageName: Toon Gas Station
+  packageVersion: 1.2
+  assetPath: Assets/Toon Gas Station/Scenes/Demo_Scene_1.unity
+  uploadId: 358113

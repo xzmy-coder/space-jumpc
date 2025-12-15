@@ -4,6 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// 仅在Unity编辑器中引入Editor命名空间（打包时自动忽略）
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class Save : MonoBehaviour
 {
     public const string MENU_SAVE = "MenuSave";
@@ -11,7 +16,7 @@ public class Save : MonoBehaviour
     public static string saveKey; // 存档/读档用的键
     public static Vector3 PlayerPosition;
     public static Vector3 LoadPosition;
-    // 【新增】全局变量：存储“当前点击的按钮键”（核心！）
+
     public static string SelectedSaveKey;
 
     [System.Serializable]
@@ -83,14 +88,14 @@ public class Save : MonoBehaviour
         // 空值防护：确保选中了按钮键
         if (string.IsNullOrEmpty(Save.SelectedSaveKey))
         {
-            Debug.LogError("❌ 未选中任何存档按钮！先点击存档按钮再存档");
+            Debug.LogError("未选中任何存档按钮！先点击存档按钮再存档");
             return;
         }
         var saveData = new SaveData();
         saveData.playerPosition = PlayerPosition;
         // 用“当前选中的按钮键”存档（核心修改）
         SaveSystem.SaveByPlayerPrefs(Save.SelectedSaveKey, saveData);
-        Debug.Log($"✅ 存档成功！键：{Save.SelectedSaveKey}，位置：{PlayerPosition}");
+        Debug.Log($"存档成功！键：{Save.SelectedSaveKey}，位置：{PlayerPosition}");
 
         if (Instance != null && Instance.save != null)
         {
@@ -125,7 +130,7 @@ public class Save : MonoBehaviour
         string btnText = keyText.text;
         Save.SelectedSaveKey = btnText;
         saveKey = btnText; // 兼容旧逻辑
-        Debug.Log($"🔍 选中存档键：{Save.SelectedSaveKey}");
+        Debug.Log($"选中存档键：{Save.SelectedSaveKey}");
 
         // 2. 读档分支：子物体1未激活时
         if (!child1.gameObject.activeSelf)
@@ -133,35 +138,39 @@ public class Save : MonoBehaviour
             var json = SaveSystem.LoadFromPlayerPrefs(saveKey);
             if (string.IsNullOrEmpty(json))
             {
-                Debug.LogError("❌ 读档失败：无存档数据！");
+                Debug.LogError("读档失败：无存档数据！");
                 SceneManager.LoadScene(1);
                 return;
             }
             var saveData = JsonUtility.FromJson<SaveData>(json);
             if (saveData == null)
             {
-                Debug.LogError("❌ 读档失败：数据解析错误！");
+                Debug.LogError("读档失败：数据解析错误！");
                 SceneManager.LoadScene(1);
                 return;
             }
             Save.LoadPosition = saveData.playerPosition;
-            Debug.Log($"📤 读档数据已存全局变量：{Save.LoadPosition}");
+            Debug.Log($"读档数据已存全局变量：{Save.LoadPosition}");
         }
         // 3. 首次点击分支：子物体1激活时
         else
         {
             child1.gameObject.SetActive(false);
             SaveButtonChild1State();
-            Debug.Log($"🔄 首次点击，子物体1已设为未激活");
+            Debug.Log("首次点击，子物体1已设为未激活");
         }
 
         // 4. 加载场景1
         SceneManager.LoadScene(1);
     }
 
-    [UnityEditor.MenuItem("Developer/Delete Player Data Prefs")]
+    // 编辑器专属方法：清空PlayerPrefs数据（仅在编辑器中显示菜单）
+#if UNITY_EDITOR
+    [MenuItem("Developer/Delete Player Data Prefs")]
     public static void DeletePlayerDataPrefs()
     {
         PlayerPrefs.DeleteAll();
+        Debug.Log("已清空所有PlayerPrefs数据");
     }
+#endif
 }
