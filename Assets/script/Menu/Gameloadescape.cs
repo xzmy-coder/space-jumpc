@@ -1,29 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gameloadescape : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        CloseLoadUI();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseLoadUI();
+        }
     }
 
     public void CloseLoadUI()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            GameObject mainMenu = GameObject.FindGameObjectWithTag("mainmenu").gameObject;
-            GameObject gameLoadUI = GameObject.FindGameObjectWithTag("Gameload").gameObject;
-            mainMenu.transform.GetChild(0).gameObject.SetActive(true);
-            gameLoadUI.transform.GetChild(0).gameObject.SetActive(false);
-        }
+        // 查找主菜单根对象
+        GameObject mainMenu = GameObject.FindGameObjectWithTag("MainMenuRoot");
+        // 查找读档UI根对象
+        GameObject gameLoadUI = GameObject.FindGameObjectWithTag("GameLoadUIRoot");
+
+        // 直接控制根对象显示/隐藏（而非子物体0）
+        if (mainMenu != null) mainMenu.SetActive(true);
+        if (gameLoadUI != null) gameLoadUI.SetActive(false);
+
+        Debug.Log("ESC关闭读档UI：主菜单显示，读档UI隐藏");
     }
 }

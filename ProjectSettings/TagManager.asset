@@ -14,6 +14,11 @@ TagManager:
   - Save4
   - DotsLoad
   - BounceWall
+  - TheEnd
+  - MainMenuRoot
+  - GameLoadUIRoot
+  - GameSettingUIRoot
+  - ThirdEnd
   layers:
   - Default
   - TransparentFX
