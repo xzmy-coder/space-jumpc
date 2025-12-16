@@ -3062,8 +3062,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 4.0642195, z: 1.6231468}
-  m_Center: {x: 0, y: 2.0321097, z: -0.5115733}
+  m_Size: {x: 0.6, y: 4.06422, z: 0.5916632}
+  m_Center: {x: 0, y: 2.03211, z: 0.004168654}
 --- !u!1001 &319419225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17403,7 +17403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657185006897926158, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: MoveSpeed
-      value: 50
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 657185006897926158, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: JumpHeight
@@ -17415,7 +17415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657185006897926158, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: SprintSpeed
-      value: 80
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 657185006897926158, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: MaxJumpHeight
@@ -18209,7 +18209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6961a43157a9b1a498a604bf216a5a7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -137.3
+      value: -138.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6961a43157a9b1a498a604bf216a5a7f, type: 3}
       propertyPath: m_LocalPosition.y

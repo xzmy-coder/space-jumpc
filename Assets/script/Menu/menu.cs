@@ -42,6 +42,10 @@ public class menu : MonoBehaviour
         // 3. 加载游戏场景（场景1）
         SceneManager.LoadScene(1);
         Debug.Log("开始游戏！");
+
+        ///让鼠标光标消失
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // 查找主菜单（标签：MainMenuRoot）
