@@ -30,7 +30,7 @@ public class Volumecontrol : MonoBehaviour
 
     public void CloseGameSettingUI()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Tab))
         {
             GameObject mainMenu = GameObject.FindGameObjectWithTag("MainMenuRoot").gameObject;
             GameObject gameSettingUI = GameObject.FindGameObjectWithTag("GameSettingUIRoot").gameObject;

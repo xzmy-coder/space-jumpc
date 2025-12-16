@@ -2377,7 +2377,7 @@ Transform:
   m_GameObject: {fileID: 261487330}
   serializedVersion: 2
   m_LocalRotation: {x: -0.19551414, y: 0.6310714, z: -0.11108705, w: -0.7424169}
-  m_LocalPosition: {x: -1476.73, y: 8.68, z: 723.98}
+  m_LocalPosition: {x: -1434.91, y: 8.68, z: 726.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2418,7 +2418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -181.212, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.4, y: 19.1}
+  m_AnchoredPosition: {x: 43.4, y: 20.7}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266002519
@@ -2441,10 +2441,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u63D0\u793A\uFF1A\r\n\u957F\u6309\u7A7A\u683C\u84C4\u529B\u8DF3\u8DC3\uFF0C\u5269\u4E0B\u7684\u81EA\u5DF1\u63A2\u7D22\u5427"
+  m_text: "\u63D0\u793A\uFF1A\r\n\u6CE8\u610Ftab\u6253\u5F00\u6682\u505C\u754C\u9762\uFF0C\u53EF\u4EE5\u56DE\u5230\u4E0A\u4E00\u4E2A\u5B58\u6863\u70B9\u54E6\uFF01\n\u957F\u6309\u7A7A\u683C\u84C4\u529B\u8DF3\u8DC3\uFF0C\u5269\u4E0B\u7684\u81EA\u5DF1\u63A2\u7D22\u5427"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1488fb36785ba5741af63e37d7028119, type: 2}
-  m_sharedMaterial: {fileID: -503753621726519494, guid: 1488fb36785ba5741af63e37d7028119, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b9abbc441de699469b564412b1f41dc, type: 2}
+  m_sharedMaterial: {fileID: 6922144223412393034, guid: 5b9abbc441de699469b564412b1f41dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2504,7 +2504,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -11.091841, w: 0}
+  m_margin: {x: -38.385094, y: 0, z: -11.091841, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -2533,7 +2533,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -503753621726519494, guid: 1488fb36785ba5741af63e37d7028119, type: 2}
+  - {fileID: 6922144223412393034, guid: 5b9abbc441de699469b564412b1f41dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9952,7 +9952,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1476.73, y: 8.68, z: 723.98}
+  m_LocalPosition: {x: -1434.91, y: 8.68, z: 726.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17467,7 +17467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1114260476483171701, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1476.73
+      value: -1434.91
       objectReference: {fileID: 0}
     - target: {fileID: 1114260476483171701, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17475,7 +17475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1114260476483171701, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 733.98
+      value: 736.78
       objectReference: {fileID: 0}
     - target: {fileID: 1114260476483171701, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       propertyPath: m_LocalRotation.w
