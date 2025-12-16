@@ -11,7 +11,7 @@ public class GamePauseManager : MonoBehaviour
     void Update()
     {
         // ¼àÌý ESC ¼ü
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (isPaused)
             {
