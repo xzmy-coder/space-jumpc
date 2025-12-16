@@ -11,8 +11,8 @@ public class Volumecontrol : MonoBehaviour
     private Slider audioslider;
     void Start()
     {
-        menuaudio = GameObject.FindGameObjectWithTag("mainmenu").GetComponent<AudioSource>();
-        menuaudio = GameObject.FindGameObjectWithTag("mainmenu").GetComponent<AudioSource>();
+        menuaudio = GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<AudioSource>();
+        
         audioslider = GetComponent<Slider>();
     }
 
@@ -32,8 +32,8 @@ public class Volumecontrol : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            GameObject mainMenu = GameObject.FindGameObjectWithTag("mainmenu").gameObject;
-            GameObject gameSettingUI = GameObject.FindGameObjectWithTag("gamesettingui").gameObject;
+            GameObject mainMenu = GameObject.FindGameObjectWithTag("MainMenuRoot").gameObject;
+            GameObject gameSettingUI = GameObject.FindGameObjectWithTag("GameSettingUIRoot").gameObject;
             mainMenu.transform.GetChild(0).gameObject.SetActive(true);
             gameSettingUI.transform.GetChild(0).gameObject.SetActive(false);
         }

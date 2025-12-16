@@ -19,6 +19,8 @@ TagManager:
   - GameLoadUIRoot
   - GameSettingUIRoot
   - ThirdEnd
+  - MenuMusic
+  - EndText
   layers:
   - Default
   - TransparentFX

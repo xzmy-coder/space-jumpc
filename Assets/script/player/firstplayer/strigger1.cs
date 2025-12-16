@@ -24,6 +24,14 @@ public class strigger : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+        if(other.gameObject==GameObject.FindGameObjectWithTag("TheEnd"))
+        {
+            GameObject endText = GameObject.FindGameObjectWithTag("EndText").gameObject.transform.GetChild(0).gameObject;
+            endText.SetActive(true);
+            /// Û±Í≥ˆœ÷
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }
 

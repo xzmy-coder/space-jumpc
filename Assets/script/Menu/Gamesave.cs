@@ -36,6 +36,6 @@ public class Save : MonoBehaviour
             return;
         }
         _instance = this;
-        DontDestroyOnLoad(gameObject);
+        
     }
 }
