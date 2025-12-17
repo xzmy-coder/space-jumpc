@@ -4,10 +4,10 @@ namespace SaveSystemTutorial
 {
     public static class SaveSystem
     {
-        // 固定存档键（无需按钮，全程用这个键存档/读档）
+        // 固定存档键
         public const string DEFAULT_SAVE_KEY = "DefaultSave";
 
-        // 保存数据（返回是否成功）
+        // 保存数据
         public static bool SaveData(object data)
         {
             if (data == null)
@@ -61,7 +61,7 @@ namespace SaveSystemTutorial
             }
         }
 
-        // 清空存档（可选，编辑器用）
+        // 清空存档
         public static void ClearSaveData()
         {
             PlayerPrefs.DeleteKey(DEFAULT_SAVE_KEY);
@@ -75,6 +75,6 @@ namespace SaveSystemTutorial
     public class SaveData
     {
         public Vector3 playerPosition;
-        public long saveTime; // 存档时间戳（验证数据有效性）
+        public long saveTime; // 存档时间（验证数据有效性）
     }
 }

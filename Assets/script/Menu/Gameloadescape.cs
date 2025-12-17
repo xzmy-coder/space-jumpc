@@ -17,7 +17,7 @@ public class Gameloadescape : MonoBehaviour
         // 查找读档UI根对象
         GameObject gameLoadUI = GameObject.FindGameObjectWithTag("GameLoadUIRoot");
 
-        // 直接控制根对象显示/隐藏（而非子物体0）
+        // 直接控制根对象显示/隐藏
         if (mainMenu != null) mainMenu.SetActive(true);
         if (gameLoadUI != null) gameLoadUI.SetActive(false);
 

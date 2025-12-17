@@ -11,7 +11,7 @@ public class menu : MonoBehaviour
         Application.Quit();
     }
 
-    // 打开设置UI（保留，无需可删除）
+    // 打开设置UI
     public void OpenGameSettingUI()
     {
         GameObject mainMenu = FindMainMenu().gameObject;
@@ -21,7 +21,7 @@ public class menu : MonoBehaviour
         settingUI.transform.GetChild(0).gameObject.SetActive(true);
     }
 
-    // 【核心】开始游戏：自动检测存档，有则读档，无则默认位置
+    // 开始游戏：自动检测存档，有则读档，无则默认位置
     public void StartGame()
     {
         // 1. 隐藏主菜单
@@ -48,7 +48,7 @@ public class menu : MonoBehaviour
         Cursor.visible = false;
     }
 
-    // 查找主菜单（标签：MainMenuRoot）
+    // 查找主菜单
     private GameObject FindMainMenu()
     {
         GameObject mainMenu = GameObject.FindGameObjectWithTag("MainMenuRoot");
@@ -62,7 +62,7 @@ public class menu : MonoBehaviour
 
 
 #if UNITY_EDITOR
-    // 编辑器菜单：清空存档（方便测试）
+    // 编辑器菜单：清空存档
     [UnityEditor.MenuItem("Developer/清空存档数据")]
     private static void ClearSave()
     {

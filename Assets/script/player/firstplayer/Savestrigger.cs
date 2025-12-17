@@ -3,10 +3,10 @@ using SaveSystemTutorial;
 
 public class Savestrigger : MonoBehaviour
 {
-    // 玩家进入存档点触发（碰撞体需勾选Is Trigger）
+    // 玩家进入存档点触发
     private void OnTriggerEnter(Collider other)
     {
-        // 仅响应玩家（玩家标签需设为"Player"）
+        // 仅响应玩家
         if (!other.CompareTag("Player")) return;
 
         // 赋值玩家当前位置

@@ -27,7 +27,7 @@ public class Save : MonoBehaviour
         }
     }
 
-    // 确保跨场景不销毁
+    
     private void Awake()
     {
         if (_instance != null && _instance != this)
